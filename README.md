@@ -53,3 +53,5 @@ Test the API without setting up the project locally
 - Provide the username and password in the request body to to obtain a JWT token by sending a POST request with valid credentials
 - Copy the received token
 - Use the `protected` endpoints by sending a request with the token in the Authorization header (Bearer token)
+
+[ayush20501.ag@gmail.com](mailto:ayush20501.ag@gmail.com)
