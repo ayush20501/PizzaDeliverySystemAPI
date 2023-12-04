@@ -3,6 +3,11 @@ This is a REST API for a Pizza delivery service built using following technologi
 1. FastAPI
 2. SQLAlchemy
 3. PostgreSQL (Supabase)
+4. Render (for deployment)
+
+Visit the [API](https://pizzadileverysystemapi.onrender.com/docs)
+
+![Firefox_Screenshot_2023-12-04T07-08-50 380Z](https://github.com/ayush20501/PizzaDeliverySystemAPI/assets/77526719/406433db-e119-43fb-b57f-be9cb990d745)
 
 ## API Routes
 
