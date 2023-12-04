@@ -3,9 +3,9 @@ This is a REST API for a Pizza delivery service built using following technologi
 1. FastAPI
 2. SQLAlchemy
 3. PostgreSQL (Supabase)
-4. Render (for deployment)
+4. Hugging Face (for deployment)
 
-Visit the [API](https://pizzadileverysystemapi.onrender.com/docs)
+Visit the [API](https://ayushhgupta-pizzaserviceapi.hf.space/docs)
 
 ![Firefox_Screenshot_2023-12-04T07-08-50 380Z](https://github.com/ayush20501/PizzaDeliverySystemAPI/assets/77526719/406433db-e119-43fb-b57f-be9cb990d745)
 
@@ -40,7 +40,7 @@ Visit the [API](https://pizzadileverysystemapi.onrender.com/docs)
 Test the API without setting up the project locally
 
 **On Swagger UI**
-- Open url `https://pizzadileverysystemapi.onrender.com/docs`
+- Open url `https://ayushhgupta-pizzaserviceapi.hf.space/docs`
 - If you are not signed up, click on the `/signup ` endpoint and fill in the required details. If you have already signed up, click on the "Authenticate" button and input your username and password
 - Create your virtualenv and activate it
 - Once authenticated, you will have access to authenticated routes
