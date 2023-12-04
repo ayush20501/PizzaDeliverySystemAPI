@@ -16,7 +16,7 @@ def get_db():
 
 
 @app.get('/orders', response_model=List[schemas.OrderResponse])
-def all_orders(db: Session = Depends(get_db), current_user: dict = Depends(auth.get_current_user)):
+async def all_orders(db: Session = Depends(get_db), current_user: dict = Depends(auth.get_current_user)):
     orders = db.query(models.Order).filter(models.Order.user_id == current_user['id']).all()
 
     current_datetime = datetime.utcnow()
@@ -38,7 +38,7 @@ def all_orders(db: Session = Depends(get_db), current_user: dict = Depends(auth.
 
 
 @app.post('/orders')
-def place_orders(data : schemas.OrderSchema, db : Session = Depends(get_db),  current_user: dict = Depends(auth.get_current_user)):
+async def place_orders(data : schemas.OrderSchema, db : Session = Depends(get_db),  current_user: dict = Depends(auth.get_current_user)):
     pizza = db.query(models.Pizza.type).all()
 
     pizza_type = [i for (i,) in pizza]
@@ -59,7 +59,7 @@ def place_orders(data : schemas.OrderSchema, db : Session = Depends(get_db),  cu
 
 
 @app.get('/orders/{id}', response_model=schemas.OrderResponse)
-def view_order(id : int, db : Session = Depends(get_db),  current_user: dict = Depends(auth.get_current_user)):
+async def view_order(id : int, db : Session = Depends(get_db),  current_user: dict = Depends(auth.get_current_user)):
     order = db.query(models.Order).filter(models.Order.order_id == id).first()
     if not order:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail= f"no order found with order id: {id}")
@@ -112,7 +112,7 @@ async def update_order(id : int, data : schemas.OrderSchema, db : Session = Depe
     return order
 
 @app.delete('/orders/{id}')
-def delete_order(id : int, db : Session = Depends(get_db),  current_user: dict = Depends(auth.get_current_user)):
+async def delete_order(id : int, db : Session = Depends(get_db),  current_user: dict = Depends(auth.get_current_user)):
     order = db.query(models.Order).filter(models.Order.order_id == int(id)).first()
 
     if not order:
