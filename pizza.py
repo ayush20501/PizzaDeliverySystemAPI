@@ -16,6 +16,6 @@ def get_db():
 
 
 @app.get('/pizzas', response_model=List[schemas.PizzaSchema], status_code=status.HTTP_202_ACCEPTED)
-def all_pizzas(db : Session = Depends(get_db)):
+async def all_pizzas(db : Session = Depends(get_db)):
     pizza = db.query(models.Pizza).all()
     return pizza
