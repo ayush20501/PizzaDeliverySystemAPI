@@ -54,4 +54,8 @@ Test the API without setting up the project locally
 - Copy the received token
 - Use the `protected` endpoints by sending a request with the token in the Authorization header (Bearer token)
 
-[ayush20501.ag@gmail.com](mailto:ayush20501.ag@gmail.com)
+***
+Created By: Ayush Gupta<br/>
+Gmail: ayush20501.ag@gmail.com<br/>
+[Linkedin](https://www.linkedin.com/in/ayush-gupta-3bb02a1a2)
+
